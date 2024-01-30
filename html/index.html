@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/html/CSS/stylesheet.css">
+    <script src="/html/javascript/slideshow.js"></script>
+    <title>Food Marketing</title>
+    <style>
+        #notification {
+            display: none;
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="heading">
+        <p id="headingText">Food Marketing</p>
+    </div>
+
+    <div id="background">
+        <img src="/html/picture/background.webp" alt="Picture of Food" class="myBackground">
+        <img src="/html/picture/background2.webp" alt="Picture of Food" class="myBackground">
+        <img src="/html/picture/background3.webp" alt="Picture of Food" class="myBackground">
+        <img src="/html/picture/background4.webp" alt="Picture of Food" class="myBackground">
+    </div>
+
+    <div id="signIn">
+        <input type="text" id="usernameInput" placeholder="Username">
+        <br>
+        <input type="password" id="passwordInput" placeholder="Password">
+        <br>
+        <button type="button" onclick="attemptLogin()">Sign In</button>
+    </div>
+
+    <div id="notification">Logging in...</div>
+
+    <script>
+        function attemptLogin() {
+            var username = document.getElementById('usernameInput').value;
+            var password = document.getElementById('passwordInput').value;
+
+            // Check if both fields are filled
+            if (username.trim() === '' || password.trim() === '') {
+                // Display a notification message
+                showNotification('Please fill in both username and password.');
+                return;
+            }
+
+            // If validation is successful, proceed to the next page
+            showNotification('Logging in...'); // Display a notification message
+
+            // Simulate a delay (e.g., AJAX request) before redirecting to the next page
+            setTimeout(function() {
+                // Redirect to the second web page
+                window.location.href = "page2.html";
+            }, 2000); // Simulating a 2-second delay (adjust as needed)
+        }
+
+        function showNotification(message) {
+            var notification = document.getElementById('notification');
+            notification.innerHTML = message;
+            notification.style.display = 'block';
+
+            // Hide the notification after a few seconds (adjust as needed)
+            setTimeout(function() {
+                notification.style.display = 'none';
+            }, 3000);
+        }
+    </script>
+</body>
+</html>

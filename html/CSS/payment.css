@@ -1,0 +1,50 @@
+/* styles.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #eff5fb; /* Light blue background */
+}
+
+#PaymentInfo {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #b2d2e1; /* Light blue border color */
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+}
+
+#paymentForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    margin: 10px 0;
+}
+
+input {
+    padding: 8px;
+    margin-bottom: 15px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
